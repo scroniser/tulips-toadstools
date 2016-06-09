@@ -38,7 +38,20 @@
 			      <a class="navbar-brand" href="#">Brand</a>
 			    </div>
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					<?php
+			            wp_nav_menu( array(
+			                'menu'              => 'primary-menu',
+			                'theme_location'    => 'primary',
+			                'menu_id' 			=> 'primary-menu',
+			                'depth'             => 4,
+			                'container'         => 'div',
+			                'container_class'   => 'collapse navbar-collapse',
+			        		'container_id'      => 'primary-menu',
+			                'menu_class'        => 'nav navbar-nav',
+			                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+			                'walker'            => new wp_bootstrap_navwalker())
+			            );
+			        ?>
 			</div>
 		</nav><!-- #site-navigation -->
 		<div class="site-branding jumbotron">

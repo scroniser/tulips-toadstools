@@ -76,6 +76,10 @@ function tulips_and_toadstools_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	register_nav_menus( array(
+    	'primary' => __( 'Primary Menu', 'tulips-and-toadstools' ),
+	) );
 }
 endif;
 add_action( 'after_setup_theme', 'tulips_and_toadstools_setup' );
@@ -108,6 +112,7 @@ function tulips_and_toadstools_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
+
 add_action( 'widgets_init', 'tulips_and_toadstools_widgets_init' );
 
 /**
@@ -119,7 +124,7 @@ function tulips_and_toadstools_scripts() {
 	wp_enqueue_style( 'bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
 
 	wp_enqueue_style( 'bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css');
-	
+
 	wp_enqueue_script( 'tulips-and-toadstools-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'tulips-and-toadstools-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -162,4 +167,6 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
 
