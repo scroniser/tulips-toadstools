@@ -35,6 +35,7 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
+
 			      <a class="navbar-brand" href="#">Brand</a>
 			    </div>
 
@@ -56,9 +57,21 @@
 		</nav><!-- #site-navigation -->
 		<div class="site-branding jumbotron">
 			<div class="container">
+
 				<?php
 				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php if ( get_theme_mod( 'themeslug_events_images' ) ) : ?>
+    					<div class='site-events'>
+
+        					<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_images' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+    					</div>
+					<?php else : ?>
+    					<hgroup>
+					        <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+					        <h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
+					    </hgroup>
+					<?php endif; ?>
+					
 				<?php else : ?>
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php

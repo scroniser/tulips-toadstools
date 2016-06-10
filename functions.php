@@ -118,6 +118,7 @@ add_action( 'widgets_init', 'tulips_and_toadstools_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
 function tulips_and_toadstools_scripts() {
 	wp_enqueue_style( 'tulips-and-toadstools-style', get_stylesheet_uri() );
 
@@ -140,7 +141,28 @@ function tulips_and_toadstools_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tulips_and_toadstools_scripts' );
 
+function themeslug_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'themeslug_events_images_section' , array(
+    'title'       => __( 'Event Images', 'themeslug' ),
+    'priority'    => 30,
+    'description' => 'Upload images for the events',
+) );
+    $wp_customize->add_setting( 'themeslug_events_images', array(
+    	'sanitize_callback' => 'absint'
+    	) );
 
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'cropped_image', array(
+    'section'  => 'themeslug_events_images_section',
+    'label'    => __( 'Event Images', 'themeslug' ),
+    'flex_width'  => false, // Allow any width, making the specified value recommended. False by default.
+    'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
+    'width'       => 557,
+    'height'      => 312,
+    'settings' => 'themeslug_events_images',
+) ) );
+
+}
+add_action( 'customize_register', 'themeslug_theme_customizer' );
 
 /**
  * Implement the Custom Header feature.
