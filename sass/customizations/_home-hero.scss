@@ -1,0 +1,51 @@
+#hero1 {
+    @include aspect-ratio(415,321);
+}
+#hero2 {
+    @include aspect-ratio(415,161);
+}
+#hero3 {
+    @include aspect-ratio(324,490);
+}
+#hero4 {
+    @include aspect-ratio(226,321);
+}
+#hero5 {
+    @include aspect-ratio(226,161);
+}
+#hero-col1 {
+    @include col-with-ratio(414);
+}
+#hero-col2 {
+    @include col-with-ratio(324);
+}
+#hero-col3 {
+    @include col-with-ratio(225);
+}
+
+.hero-col {
+    height: 100%;
+    margin: unset;
+    padding: unset;
+}
+.hero-cols {
+    display: inline-table;
+    height: 100%;
+}
+
+.hero-cols div:nth-child(2) {
+    margin-top: 0.6em;
+}
+
+.hero-image-center {
+    padding: 0 0.6em;
+    height: 100%;
+}
+
+.hero-title {
+    background-color: rgba(251, 251, 251, 0.5);
+    display: inline-flex;
+    padding: 20px;
+    position: relative;
+    top: calc(100% - 100px);
+}

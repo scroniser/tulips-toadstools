@@ -147,6 +147,12 @@ function themeslug_theme_customizer( $wp_customize ) {
     'priority'    => 30,
     'description' => 'Upload images for the events',
 ) );
+    $wp_customize->add_setting('themeslug_events_image_title_1');
+    $wp_customize->add_control( 'themeslug_events_image_title_1', array(
+        'section'  => 'themeslug_events_images_section',
+        'label' => 'Event Title for Image 1',
+        'type' => 'text',
+) );
     $wp_customize->add_setting( 'themeslug_events_image_1', array(
     	'sanitize_callback' => 'absint'
     	) );
@@ -160,6 +166,12 @@ function themeslug_theme_customizer( $wp_customize ) {
     'height'      => 321,
     'settings' => 'themeslug_events_image_1',
 ) ) );
+    $wp_customize->add_setting('themeslug_events_image_title_2');
+    $wp_customize->add_control( 'themeslug_events_image_title_2', array(
+        'section'  => 'themeslug_events_images_section',
+        'label' => 'Event Title for Image 2',
+        'type' => 'text',
+) );
     $wp_customize->add_setting( 'themeslug_events_image_2', array(
     	'sanitize_callback' => 'absint'
     	) );
@@ -169,10 +181,16 @@ function themeslug_theme_customizer( $wp_customize ) {
     'label'    => __( 'Event Image 2', 'themeslug' ),
     'flex_width'  => false, // Allow any width, making the specified value recommended. False by default.
     'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
-    'width'       => 414,
-    'height'      => 106,
+    'width'       => 415,
+    'height'      => 161,
     'settings' => 'themeslug_events_image_2',
 ) ) );
+    $wp_customize->add_setting('themeslug_events_image_title_3');
+    $wp_customize->add_control( 'themeslug_events_image_title_3', array(
+        'section'  => 'themeslug_events_images_section',
+        'label' => 'Event Title for Image 3',
+        'type' => 'text',
+) );
     $wp_customize->add_setting( 'themeslug_events_image_3', array(
     	'sanitize_callback' => 'absint'
     	) );
@@ -186,7 +204,12 @@ function themeslug_theme_customizer( $wp_customize ) {
     'height'      => 490,
     'settings' => 'themeslug_events_image_3',
 ) ) );
-
+    $wp_customize->add_setting('themeslug_events_image_title_4');
+    $wp_customize->add_control( 'themeslug_events_image_title_4', array(
+        'section'  => 'themeslug_events_images_section',
+        'label' => 'Event Title for Image 4',
+        'type' => 'text',
+) );
     $wp_customize->add_setting( 'themeslug_events_image_4', array(
     	'sanitize_callback' => 'absint'
     	) );
@@ -200,6 +223,13 @@ function themeslug_theme_customizer( $wp_customize ) {
     'height'      => 321,
     'settings' => 'themeslug_events_image_4',
 ) ) );
+
+    $wp_customize->add_setting('themeslug_events_image_title_5');
+    $wp_customize->add_control( 'themeslug_events_image_title_5', array(
+        'section'  => 'themeslug_events_images_section',
+        'label' => 'Event Title for Image 5',
+        'type' => 'text',
+) );
 
     $wp_customize->add_setting( 'themeslug_events_image_5', array(
     	'sanitize_callback' => 'absint'

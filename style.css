@@ -656,4 +656,117 @@ object {
 .gallery-caption {
   display: block; }
 
+/*
+# Customizations
+--*/
+/*--------------------------------------------------------------
+## Homepage Hero (Jumbotron)
+--------------------------------------------------------------*/
+#hero1 {
+  position: relative; }
+  #hero1:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 77.3494%; }
+  #hero1 > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; }
+
+#hero2 {
+  position: relative; }
+  #hero2:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 38.79518%; }
+  #hero2 > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; }
+
+#hero3 {
+  position: relative; }
+  #hero3:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 151.23457%; }
+  #hero3 > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; }
+
+#hero4 {
+  position: relative; }
+  #hero4:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 142.0354%; }
+  #hero4 > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; }
+
+#hero5 {
+  position: relative; }
+  #hero5:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 71.23894%; }
+  #hero5 > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; }
+
+#hero-col1 {
+  width: 42.20183%; }
+
+#hero-col2 {
+  width: 33.02752%; }
+
+#hero-col3 {
+  width: 22.93578%; }
+
+.hero-col {
+  height: 100%;
+  margin: unset;
+  padding: unset; }
+
+.hero-cols {
+  display: inline-table;
+  height: 100%; }
+
+.hero-cols div:nth-child(2) {
+  margin-top: 0.6em; }
+
+.hero-image-center {
+  padding: 0 0.6em;
+  height: 100%; }
+
+.hero-title {
+  background-color: rgba(251, 251, 251, 0.5);
+  display: inline-flex;
+  padding: 20px;
+  position: relative;
+  top: calc(100% - 100px); }
+
 /*# sourceMappingURL=style.css.map */

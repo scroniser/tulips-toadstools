@@ -61,13 +61,40 @@
 				<?php
 				if ( is_front_page() && is_home() ) : ?>
 					<?php if ( get_theme_mod( 'themeslug_events_images' ) ) : ?>
-    					<div class='site-events'>
-
-        					<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_1' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
-        					<img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_2' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-        					<img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_3' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-        					<img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_4' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-        					<img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_5' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+    					<div class='site-events row'>
+    						<div class='col-xs-12 hero-col'>
+    							<div id='hero-col1' class='hero-cols'>
+    								<div id='hero1'>
+    									<div class='content' style='background-image:url(<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_1' )) ); ?>);'>
+	    									<p class='hero-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php echo get_theme_mod( 'themeslug_events_image_title_1' ); ?></a></p>
+	    								</div>
+	    							</div>
+	        						<div id='hero2'>
+		        						<div class='content' style='background-image:url(<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_2' )) ); ?>);'>
+		    								<p class='hero-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php echo get_theme_mod( 'themeslug_events_image_title_2' ); ?></a></p>
+		    							</div>
+	    							</div>
+	    						</div>
+	    						<div id='hero-col2' class='hero-cols'>
+	    							<div id='hero3'>
+	    								<div class='content' style='background-image:url(<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_3' )) ); ?>);'>
+	    									<p class='hero-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php echo get_theme_mod( 'themeslug_events_image_title_3' ); ?></a></p>
+	    								</div>
+	    							</div>
+	    						</div>
+    							<div id='hero-col3' class='hero-cols'>
+    								<div id='hero4'>
+    									<div class='content' style='background-image:url(<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_4' )) ); ?>);'>
+	    									<p class='hero-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php echo get_theme_mod( 'themeslug_events_image_title_4' ); ?></a></p>
+	    								</div>
+	    							</div>
+	        						<div id='hero5'>
+	        							<div class='content' style='background-image:url(<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_5' )) ); ?>);'>
+	    									<p class='hero-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php echo get_theme_mod( 'themeslug_events_image_title_5' ); ?></a></p>
+	    								</div>
+	    							</div>
+	    						</div>
+    						</div>
     					</div>
 					<?php else : ?>
     					<hgroup>
