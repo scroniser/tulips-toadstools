@@ -63,7 +63,11 @@
 					<?php if ( get_theme_mod( 'themeslug_events_images' ) ) : ?>
     					<div class='site-events'>
 
-        					<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_images' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+        					<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_1' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+        					<img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_2' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+        					<img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_3' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+        					<img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_4' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+        					<img src='<?php echo esc_url( wp_get_attachment_url(get_theme_mod( 'themeslug_events_image_5' )) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
     					</div>
 					<?php else : ?>
     					<hgroup>

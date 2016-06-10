@@ -147,20 +147,73 @@ function themeslug_theme_customizer( $wp_customize ) {
     'priority'    => 30,
     'description' => 'Upload images for the events',
 ) );
-    $wp_customize->add_setting( 'themeslug_events_images', array(
+    $wp_customize->add_setting( 'themeslug_events_image_1', array(
     	'sanitize_callback' => 'absint'
     	) );
 
-    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'cropped_image', array(
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'themeslug_events_image_1', array(
     'section'  => 'themeslug_events_images_section',
-    'label'    => __( 'Event Images', 'themeslug' ),
+    'label'    => __( 'Event Image 1', 'themeslug' ),
     'flex_width'  => false, // Allow any width, making the specified value recommended. False by default.
     'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
-    'width'       => 557,
-    'height'      => 312,
-    'settings' => 'themeslug_events_images',
+    'width'       => 415,
+    'height'      => 321,
+    'settings' => 'themeslug_events_image_1',
+) ) );
+    $wp_customize->add_setting( 'themeslug_events_image_2', array(
+    	'sanitize_callback' => 'absint'
+    	) );
+
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'themeslug_events_image_2', array(
+    'section'  => 'themeslug_events_images_section',
+    'label'    => __( 'Event Image 2', 'themeslug' ),
+    'flex_width'  => false, // Allow any width, making the specified value recommended. False by default.
+    'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
+    'width'       => 414,
+    'height'      => 106,
+    'settings' => 'themeslug_events_image_2',
+) ) );
+    $wp_customize->add_setting( 'themeslug_events_image_3', array(
+    	'sanitize_callback' => 'absint'
+    	) );
+
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'themeslug_events_image_3', array(
+    'section'  => 'themeslug_events_images_section',
+    'label'    => __( 'Event Image 3', 'themeslug' ),
+    'flex_width'  => false, // Allow any width, making the specified value recommended. False by default.
+    'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
+    'width'       => 324,
+    'height'      => 490,
+    'settings' => 'themeslug_events_image_3',
 ) ) );
 
+    $wp_customize->add_setting( 'themeslug_events_image_4', array(
+    	'sanitize_callback' => 'absint'
+    	) );
+
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'themeslug_events_image_4', array(
+    'section'  => 'themeslug_events_images_section',
+    'label'    => __( 'Event Image 4', 'themeslug' ),
+    'flex_width'  => false, // Allow any width, making the specified value recommended. False by default.
+    'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
+    'width'       => 226,
+    'height'      => 321,
+    'settings' => 'themeslug_events_image_4',
+) ) );
+
+    $wp_customize->add_setting( 'themeslug_events_image_5', array(
+    	'sanitize_callback' => 'absint'
+    	) );
+
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'themeslug_events_image_5', array(
+    'section'  => 'themeslug_events_images_section',
+    'label'    => __( 'Event Image 5', 'themeslug' ),
+    'flex_width'  => false, // Allow any width, making the specified value recommended. False by default.
+    'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
+    'width'       => 226,
+    'height'      => 161,
+    'settings' => 'themeslug_events_image_5',
+) ) );
 }
 add_action( 'customize_register', 'themeslug_theme_customizer' );
 
